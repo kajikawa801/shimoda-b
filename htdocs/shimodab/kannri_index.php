@@ -31,12 +31,7 @@
 					{
 						break;
 					}
-					print '<br />';
-				print '<form method="get" action="kannri_index2.php">';
-				print '商品修正：番号';
-				print '<input type="text" name="procode" style="width:20px">';
-				print '<input type="submit" value="決定">';
-				print '</form>';
+				
 					print h($rec['code_vmachine']).' ';
 					print h($rec['name_vmachine']).' ';
 					if($rec['image']=='')
@@ -50,7 +45,12 @@
 					print '<br /><br /><br />';
 				}
 			
-				
+				print '<br />';
+				print '<form method="get" action="kannri_index2.php">';
+				print '商品修正：番号';
+				print '<input type="text" name="procode" style="width:20px">';
+				print '<input type="submit" value="決定">';
+				print '</form>';
 
 
 				

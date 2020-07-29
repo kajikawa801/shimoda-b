@@ -35,12 +35,7 @@
 					}
 					//$_SESSION['code_vmachine'] = "$pro_code";
 
-					print '<br />';
-				print '<form method="get" action="kannri_edit.php">';
-				print '商品設定：番号';
-				print '<input type="text" name="prodrink" style="width:20px">';
-				print '<input type="submit" value="決定">';
-				print '</form>';
+					
 
 					print h($rec['code_drink']).' ';
 					//$pro_name = $rec['name_drink'];
@@ -57,11 +52,12 @@
 					print '<br /><br /><br />';
 				}
 
-	
-
-			
-
-				
+				print '<br />';
+				print '<form method="get" action="edit.php">';
+				print '商品設定：番号';
+				print '<input type="text" name="prodrink" style="width:20px">';
+				print '<input type="submit" value="決定">';
+				print '</form>';	
 				
 			}
 			catch (Exception $e)

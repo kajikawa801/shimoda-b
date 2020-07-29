@@ -26,12 +26,13 @@
 		<?php
 			require'db.php';
 
-//			session_start();
-
+        	//session_start();
+            
             $pro_name=$_POST['name_drink'];
             $pro_data=$_POST['data_drink'];
             $pro_price=$_POST['price'];
-            $disp_gazou=$_POST['image_drink'];
+			$disp_gazou=$_POST['image_drink'];
+			
 			if($pro_name=='')
 			{
 				print '名前が入力されていません。<br />';
@@ -84,7 +85,7 @@
 			{
 				print '上記の内容に修正します。<br />';
 				print '<br />';
-
+               
 				$_SESSION['name_drink'] = "$pro_name";
                 $_SESSION['data_drink'] = "$pro_data";
                 $_SESSION['price'] = "$pro_price";
