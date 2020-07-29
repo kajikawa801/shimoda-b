@@ -8,6 +8,7 @@
 	<body>
 		<?php
 			require'db.php';
+			require_once '_common.php';
 			try
 			{
 				$pro_code=$_GET['procode'];
@@ -35,12 +36,7 @@
 					}
 					//$_SESSION['code_vmachine'] = "$pro_code";
 
-					print '<br />';
-				print '<form method="get" action="m_syouhinn.php">';
-				print '商品表示：番号';
-				print '<input type="text" name="pronomimono" style="width:20px">';
-				print '<input type="submit" value="決定">';
-				print '</form>';
+					
 					
 					print h($rec['code_drink']).' ';
 					//$pro_name = $rec['name_drink'];
@@ -57,7 +53,12 @@
 					print '<br /><br /><br />';
 				}
 
-				
+				print '<form method="get" action="m_jihannki_itiran.php">';
+						print '商品表示：名前';
+						pulldown_disp();
+						print '<input type="submit" value="決定">';
+						print '</form>';
+						print '<br />';
 			}
 			catch (Exception $e)
 			{

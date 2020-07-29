@@ -34,8 +34,24 @@
 						break;
 					}
 					//$_SESSION['code_vmachine'] = "$pro_code";
+					print '飲み物名:';
+					print h($rec['name_drink']).' <br/> ';
+					print '飲み物情報:';
+					print h($rec['data_drink']).' <br/> ';
+					print '飲み物イメージ:';
+					if($rec['image_drink']=='')
+					{
+						$disp_gazou='';
+					}
+					else{
+						$disp_gazou='<img src="./gazou/'.$rec['image_drink'].'" height="50"><br/>';
+					}
+                    print $disp_gazou;
+                    print '価格:';
+                    print h($rec['price']).' <br/> ';
+					print '<br /><br /><br />';
 
-					
+					print '自販機一覧<br/>';
 					print h($rec['code_vmachine']).' ';
 					//$pro_name = $rec['name_drink'];
 					//$pro_price = $rec['code_drink'];
@@ -49,7 +65,16 @@
 					}
 					print $disp_image;
 					print '<br /><br /><br />';
+
+					
+					print '<form method="get" action="m_jihannki.php">';
+					print '自販機選択：番号';
+					print '<input type="text" name="procode" style="width:20px">';
+					print '<input type="submit" value="決定">';
+					print '</form>';
+                    print '<br />';
 				}
+				
 			}
 			catch (Exception $e)
 			{
