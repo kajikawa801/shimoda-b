@@ -23,37 +23,26 @@
   <body>
     <div id="map"></div>
 
-    <?php
-        require("m_config.php");
-        // Select all the rows in the markers table
-        try{
-          $sql = "select * from markers where 1";
-          $result = $pdo->query($sql);
-          $row = $result->fetchall();
-          $rowJson = json_encode($row);
-        }
-        catch(PDOException $e){
-          die("ERROR: Could not able to execute $sql. " . $e->getMessage());
-        }
-    ?>
-
     <script>
-let row = <?php echo $rowJson?>;
-
 function map_canvas() {
 //マーカーの情報
-var data = new Array();
-var data_length= <?php echo $result->rowCount(); ?>;
-
-for (i = 0; i < data_length; i++) {
-  data.push({
-      lat: row[i][3], //緯度
-      lng: row[i][4], //経度
-      url: row[i][6] //リンク先
+  var data = new Array();
+    data.push({
+      lat: '35.689220', //緯度
+      lng: '140.020782', //経度
+      url: 'https://www.it-chiba.ac.jp/' //リンク先
+    });
+    data.push({
+      lat: '35.688702',
+      lng: '140.020737',
+      url: 'http://localhost/_googlemap/vm_red.jpg'
   });
-
-}
-
+    data.push({
+      lat: '35.688194',
+      lng: '140.021362',
+      url: 'http://localhost/_googlemap/vm_blue.jpg'
+  });
+  
 //初期位置に、上記配列の一番初めの緯度経度を格納
   var latlng = new google.maps.LatLng(data[0].lat, data[0].lng);
   
