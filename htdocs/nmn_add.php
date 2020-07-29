@@ -14,6 +14,7 @@
 	//プルダウンメニュー
 	pulldown_disp();
 	print '<input type="submit" value="決定">';
+	print '<input type="button" onclick="history.back()" value="戻る">';
 	print '</form>';
 
 	
