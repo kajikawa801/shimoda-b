@@ -35,7 +35,7 @@
 //カウンタ
 $count=$prepare->rowCount();
 print '<br />';
-print 'ヒット件数';
+print 'リクエスト件数';
 print '<br />';
 print $count;
 print '<br />';
