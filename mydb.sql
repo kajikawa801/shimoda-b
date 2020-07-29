@@ -51,7 +51,7 @@ CREATE TABLE `dat_request` (
   `code_request` int(11) NOT NULL AUTO_INCREMENT,
   `name_request` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`code_request`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -60,7 +60,7 @@ CREATE TABLE `dat_request` (
 
 LOCK TABLES `dat_request` WRITE;
 /*!40000 ALTER TABLE `dat_request` DISABLE KEYS */;
-INSERT INTO `dat_request` VALUES (1,'オレンジ'),(2,'オレンジ'),(3,'オレンジ'),(4,'オレンジ');
+INSERT INTO `dat_request` VALUES (1,'オレンジ'),(2,'オレンジ'),(3,'オレンジ');
 /*!40000 ALTER TABLE `dat_request` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -138,7 +138,7 @@ CREATE TABLE `markers` (
 
 LOCK TABLES `markers` WRITE;
 /*!40000 ALTER TABLE `markers` DISABLE KEYS */;
-INSERT INTO `markers` VALUES (9,'千葉工業大学1号館','千葉県習志野市津田沼2-17-1',35.689220,140.020782,'university','https://www.it-chiba.ac.jp/'),(10,'6号館','千葉県習志野市津田沼2-17-1',35.688702,140.020737,'vending machine','http://localhost/_googlemap/vm_red.jpg'),(11,'4号館','千葉県習志野市津田沼2-17-1',35.688194,140.021362,'vending machine','http://localhost/_googlemap/vm_blue.jpg'),(12,'3号館','千葉県習志野市津田沼2-17-1',35.688446,140.021378,'vending machine','http://localhost/_googlemap/vm_pink.jpg'),(13,'バス停前','千葉県習志野市津田沼2-17-1',35.689064,140.021652,'vending machine','http://localhost/_googlemap/vm_orange.jpg');
+INSERT INTO `markers` VALUES (9,'千葉工業大学1号館','千葉県習志野市津田沼2-17-1',35.689220,140.020782,'university','https://www.it-chiba.ac.jp/'),(10,'6号館','千葉県習志野市津田沼2-17-1',35.688702,140.020737,'vending machine','./m_jihannki_6.php'),(11,'4号館','千葉県習志野市津田沼2-17-1',35.688194,140.021362,'vending machine','./m_jihannki_4.php'),(12,'3号館','千葉県習志野市津田沼2-17-1',35.688446,140.021378,'vending machine','./m_jihannki_3.php'),(13,'バス停前','千葉県習志野市津田沼2-17-1',35.689064,140.021652,'vending machine','./m_jihannki_bus.php');
 /*!40000 ALTER TABLE `markers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -166,7 +166,7 @@ CREATE TABLE `mst_beverage` (
 
 LOCK TABLES `mst_beverage` WRITE;
 /*!40000 ALTER TABLE `mst_beverage` DISABLE KEYS */;
-INSERT INTO `mst_beverage` VALUES (1,'WONDA モーニングショット','コーヒー。アサヒ飲料のWANDAシリーズの定番。\r\n朝のスイッチをオンにする 朝専用 缶コーヒースッと飲めて、キリッと苦味。\r\n“焼きたて・挽きたて・淹れたて”の目覚めるおいしさ。\r\n毎朝のスタートにふさわしい朝専用缶コーヒーです。',130,'wonda_morning.jpg',1),(2,'WONDA 金の微糖','ブラジル最高等級高級豆100%に高級豆で抽出したエスプレッソをブレンドすることで、コク深い味わいとキレのよい後味を実現。\r\n仕事に向かう前に、こだわりのひとときが愉しめるプレミアム微糖缶コーヒーです。',130,'wonda_gold.jpg',0),(3,'三ツ矢サイダー','ろ過を重ねた安心・安全な磨かれた水を使っています。\r\n果実などから集めた香りにより、独自のおいしさがうまれます。\r\n熱を加えていないので、さわやかな味わいが引き立ちます。',120,'mitsuya-cider.jpg',0),(4,'十六茶','「十六茶」は「東洋健康思想」の考え方に基づき、カラダの内外にバランスよく刺激を与えることを目的として、16種類もの健康素材をブレンドしています。',150,'sixteentea.jpg',0),(5,'モンスターエナジー','アメリカで生まれ、世界中で一大ブームを巻き起こしているエナジードリンク、Monster! 誰もがハマる爽快感とパンチのあるテイスト。',210,'monster-energy.jpg',0),(6,'カルピスウォーター','すっきり爽やかな味わい、純水でおいしく仕上げた「カルピス」です。\r\n乳酸菌と酵母、発酵という自然製法が生みだす独自のおいしさを、いつでもどこでも手軽に楽しめます。',150,'calpis_water.jpg',0),(8,'コカ・コーラ','ペットボトル500ml',160,'',0),(9,'リアルゴールド','ペットボトル500ml',160,'',0),(10,'アクエリアス','ペットボトル500ml',160,'',0),(11,'ファンタグレープ','缶350ml',130,'',0),(12,'ドクターペッパー','缶350ml',130,'',0),(13,'綾鷹','ペットボトル500ml',160,'',0),(14,'いろはす','ペットボトル500ml',100,'',0),(15,'ジョージアカフェラテ','ペットボトル500ml',160,'',0),(16,'綾鷹(350ml)','ペットボトル350ml',130,'',0),(17,'アロエ白ぶどう','缶350ml',130,'',0);
+INSERT INTO `mst_beverage` VALUES (1,'WONDA モーニングショット','コーヒー。アサヒ飲料のWANDAシリーズの定番。\r\n朝のスイッチをオンにする 朝専用 缶コーヒースッと飲めて、キリッと苦味。\r\n“焼きたて・挽きたて・淹れたて”の目覚めるおいしさ。\r\n毎朝のスタートにふさわしい朝専用缶コーヒーです。',130,'wonda_morning.jpg',1),(2,'WONDA 金の微糖','ブラジル最高等級高級豆100%に高級豆で抽出したエスプレッソをブレンドすることで、コク深い味わいとキレのよい後味を実現。\r\n仕事に向かう前に、こだわりのひとときが愉しめるプレミアム微糖缶コーヒーです。',130,'wonda_gold.jpg',1),(3,'三ツ矢サイダー','ろ過を重ねた安心・安全な磨かれた水を使っています。\r\n果実などから集めた香りにより、独自のおいしさがうまれます。\r\n熱を加えていないので、さわやかな味わいが引き立ちます。',120,'mitsuya-cider.jpg',1),(4,'十六茶','「十六茶」は「東洋健康思想」の考え方に基づき、カラダの内外にバランスよく刺激を与えることを目的として、16種類もの健康素材をブレンドしています。',150,'sixteentea.jpg',1),(5,'モンスターエナジー','アメリカで生まれ、世界中で一大ブームを巻き起こしているエナジードリンク、Monster! 誰もがハマる爽快感とパンチのあるテイスト。',210,'monster-energy.jpg',1),(6,'カルピスウォーター','すっきり爽やかな味わい、純水でおいしく仕上げた「カルピス」です。\r\n乳酸菌と酵母、発酵という自然製法が生みだす独自のおいしさを、いつでもどこでも手軽に楽しめます。',150,'calpis_water.jpg',1),(8,'コカ・コーラ','ペットボトル500ml',160,'',2),(9,'リアルゴールド','ペットボトル500ml',160,'',2),(10,'アクエリアス','ペットボトル500ml',160,'',2),(11,'ファンタグレープ','缶350ml',130,'',2),(12,'ドクターペッパー','缶350ml',130,'',2),(13,'綾鷹','ペットボトル500ml',160,'',2),(14,'いろはす','ペットボトル500ml',100,'',2),(15,'ジョージアカフェラテ','ペットボトル500ml',160,'',2),(16,'綾鷹(350ml)','ペットボトル350ml',130,'',2),(17,'アロエ白ぶどう','缶350ml',130,'',2);
 /*!40000 ALTER TABLE `mst_beverage` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -182,7 +182,7 @@ CREATE TABLE `mst_vmachine` (
   `name_vmachine` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `image` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`code_vmachine`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -191,7 +191,7 @@ CREATE TABLE `mst_vmachine` (
 
 LOCK TABLES `mst_vmachine` WRITE;
 /*!40000 ALTER TABLE `mst_vmachine` DISABLE KEYS */;
-INSERT INTO `mst_vmachine` VALUES (1,'四号館１階',''),(2,'六号館１階','');
+INSERT INTO `mst_vmachine` VALUES (1,'四号館１階１',''),(2,'六号館１階',''),(3,'四号館１階２',''),(4,'四号館１階３',''),(5,'三号館１階',''),(6,'三号館２階',''),(7,'バスターミナル１',''),(8,'バスターミナル２',''),(9,'バスターミナル３',''),(10,'五号館１階','');
 /*!40000 ALTER TABLE `mst_vmachine` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -204,4 +204,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-07-29 14:32:01
+-- Dump completed on 2020-07-30  3:07:22
