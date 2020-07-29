@@ -6,8 +6,7 @@
 	</head>
 	<body>
 		<?php
-			require_once '_database_conf.php';
-			require_once '_h.php';
+			require'db.php';
 			require_once '_common.php';
 			try
 			{

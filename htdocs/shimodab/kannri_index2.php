@@ -7,8 +7,7 @@
 	</head>
 	<body>
 		<?php
-			require_once '_database_conf.php';
-			require_once '_h.php';
+			require'db.php';
 			try
 			{
 				$pro_code=$_GET['procode'];
