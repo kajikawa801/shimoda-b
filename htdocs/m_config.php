@@ -3,6 +3,13 @@
 Database credentials. Assuming you are running MySQL
 server with default setting (user 'root' with no password)
 */
+function h($var) {
+    if (is_array($var)) {
+      return array_map('h', $var);
+    } else {
+      return htmlspecialchars($var, ENT_QUOTES, 'UTF-8');
+    }
+  }
 define('DB_SERVER', '127.0.0.1');
 define('DB_USERNAME', 'testuser');
 define('DB_PASSWORD', 'pass');
