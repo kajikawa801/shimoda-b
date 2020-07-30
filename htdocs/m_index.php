@@ -24,7 +24,7 @@
     <div id="map"></div>
 
     <?php
-        require("m_config.php");
+        require'db.php';
         // Select all the rows in the markers table
         try{
           $sql = "select * from markers where 1";
